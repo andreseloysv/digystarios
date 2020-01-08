@@ -11,6 +11,7 @@
 		5B69328623C37C1D005C12DD /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69328523C37C1D005C12DD /* UserDataKeychain.swift */; };
 		5B69328823C37C29005C12DD /* SharedWebCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69328723C37C29005C12DD /* SharedWebCredential.swift */; };
 		5B69328A23C37C2C005C12DD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69328923C37C2C005C12DD /* Keychain.swift */; };
+		5B74C11023C5E3B700AA6BC7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74C10F23C5E3B700AA6BC7 /* MainView.swift */; };
 		5BDF5EBC23C2230800880F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF5EBB23C2230800880F61 /* AppDelegate.swift */; };
 		5BDF5EBE23C2230800880F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF5EBD23C2230800880F61 /* SceneDelegate.swift */; };
 		5BDF5EC023C2230800880F61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF5EBF23C2230800880F61 /* ContentView.swift */; };
@@ -49,6 +50,7 @@
 		5B69328523C37C1D005C12DD /* UserDataKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDataKeychain.swift; path = ../../../../Downloads/SignInWithApple/final/SignInWithApple/CredentialStorage/UserDataKeychain.swift; sourceTree = "<group>"; };
 		5B69328723C37C29005C12DD /* SharedWebCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedWebCredential.swift; path = ../../../../Downloads/SignInWithApple/final/SignInWithApple/CredentialStorage/SharedWebCredential.swift; sourceTree = "<group>"; };
 		5B69328923C37C2C005C12DD /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = ../../../../Downloads/SignInWithApple/final/SignInWithApple/CredentialStorage/Keychain.swift; sourceTree = "<group>"; };
+		5B74C10F23C5E3B700AA6BC7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5BDF5EB823C2230800880F61 /* digystar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = digystar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDF5EBB23C2230800880F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BDF5EBD23C2230800880F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				5B69328323C37C0A005C12DD /* UserData.swift */,
 				5BDF5EBB23C2230800880F61 /* AppDelegate.swift */,
 				5B69328723C37C29005C12DD /* SharedWebCredential.swift */,
+				5B74C10F23C5E3B700AA6BC7 /* MainView.swift */,
 				5BDF5EBD23C2230800880F61 /* SceneDelegate.swift */,
 				5BDF5EBF23C2230800880F61 /* ContentView.swift */,
 				5BDF5EC123C2230800880F61 /* Assets.xcassets */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDF5EBC23C2230800880F61 /* AppDelegate.swift in Sources */,
+				5B74C11023C5E3B700AA6BC7 /* MainView.swift in Sources */,
 				5BDF5EBE23C2230800880F61 /* SceneDelegate.swift in Sources */,
 				5BDF5EEE23C3584500880F61 /* SignInWithApple.swift in Sources */,
 				5B69328423C37C0A005C12DD /* UserData.swift in Sources */,

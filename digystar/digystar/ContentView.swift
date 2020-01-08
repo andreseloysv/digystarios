@@ -14,24 +14,34 @@ import AuthenticationServices
 struct ContentView: View {
   @Environment(\.window) var window: UIWindow?
   @State var appleSignInDelegates: SignInWithAppleDelegates! = nil
-
+  @State var isLoggedin = false
+    
   var body: some View {
     ZStack {
-      Color.white.edgesIgnoringSafeArea(.all)
+        if !self.isLoggedin {
+             ZStack {
+              Color.white.edgesIgnoringSafeArea(.all)
+              VStack {
+                Image("digystar")
+                
+                UserAndPassword()
+                  .padding()
 
-      VStack {
-        Image("digystar")
-
-        UserAndPassword()
-          .padding()
-
-        SignInWithApple()
-          .frame(width: 280, height: 50)
-          .onTapGesture(perform: showAppleLogin)
-      }
-    }
-    .onAppear {
-      self.performExistingAccountSetupFlows()
+                SignInWithApple()
+                  .frame(width: 280, height: 50)
+                  .onTapGesture(perform: showAppleLogin)
+  
+                NavigationLink(destination: MainView(), isActive: self.$isLoggedin) {
+                  Text("hola")
+                }.hidden()
+              }
+            }
+            .onAppear {
+              //self.performExistingAccountSetupFlows()
+            }
+        } else {
+            MainView()
+        }
     }
   }
 
@@ -58,12 +68,9 @@ struct ContentView: View {
 
   private func performSignIn(using requests: [ASAuthorizationRequest]) {
     appleSignInDelegates = SignInWithAppleDelegates(window: window) { success in
-        print("Hello, world!")
       if success {
-        // update UI
-        let alertController = UIAlertController(title: "iOScreator", message:
-            "Hello, world!", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        print("Login success")
+        self.isLoggedin = true
       } else {
         // show the user an error
         let alertController = UIAlertController(title: "iOScreator", message:
