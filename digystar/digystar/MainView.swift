@@ -9,12 +9,24 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var showingImagePicker = false
+    @State var image: Image? = nil
+    
     var body: some View {
         VStack {
-            Text("Hello World")
-            Button(action:{ fileSystem() }) {
+            if image == nil {
+                Text("Hello World")
+            }
+            
+            Button(action:{self.showingImagePicker.toggle()}) {
                 Text("clickme")
             }
+        }.sheet(isPresented: $showingImagePicker,
+                content: {
+                    ImagePicker.shared.view
+        }).onReceive(ImagePicker.shared.$image) {image in
+            self.image = image
         }
     }
 }
@@ -23,25 +35,4 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
-}
-
-func fileSystem() {
-    let fm = FileManager.default
-    let path = Bundle.main.resourcePath!
-
-    do {
-        let items = try fm.contentsOfDirectory(atPath: path)
-
-        for item in items {
-            print("Found \(item)")
-        }
-    } catch {
-        // failed to read directory – bad permissions, perhaps?
-    }
-}
-
-func getDocumentsDirectory() -> URL {
-    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-    let documentsDirectory = paths[0]
-    return documentsDirectory
 }
